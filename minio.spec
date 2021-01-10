@@ -28,7 +28,7 @@ data workloads.
 
 %pre
 /usr/bin/getent group minio-user || /usr/sbin/groupadd -r minio-user
-/usr/bin/getent passwd minio-user || /usr/sbin/useradd -r -d /etc/minio -s /sbin/nologin minio-user
+/usr/bin/getent passwd minio-user || /usr/sbin/useradd -r -g minio-user -d /etc/minio -s /sbin/nologin minio-user
 
 %install
 rm -rf $RPM_BUILD_ROOT
